@@ -1,0 +1,29 @@
+doctype html
+html(ng-app='Tasknado')
+  head
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.css') 
+    link(rel='stylesheet', href='/css/style.css') 
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body(ng-controller='TasksCtrl')
+    .container-fluid
+      .task-list.col-xs-12.col-sm-6
+        h2 Tasks
+        .task(ng-repeat='task in tasks', ng-click='setCurrentTask(task)')
+          h4 {{task.title}}
+          p {{task.description}}
+          p {{task.status}}
+      .task-detail.col-xs-12.col-sm-6
+        h2 Edit Task
+        form#task-edit-form
+          div
+            label(for='inputTitle') Title:  
+            input(type='text', placeholder='Title', ng-model='currentTask.title')
+          div
+            label(for='inputDescription') Description:  
+            textarea(type='text', rows='3', placeholder='Description', ng-model='currentTask.description')
+          div
+            label(for='inputStatus') Status:  
+            select(id='inputStatus', ng-model='currentStatus', ng-options='s.name for s in statuses', ng-change='setCurrentStatus(currentStatus)')
+  
+    script(src='angular/angular.min.js')
+    script(src='js/controllers.js')

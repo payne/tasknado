@@ -1,0 +1,28 @@
+body {
+  padding: 8px;
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+}
+
+.task-list>.task:first-of-type {
+  border-top: 1px solid black;
+}
+
+.task-list>.task {
+  background-color: #eee;
+  padding: 4px;
+  border-bottom: 1px solid black;
+}
+
+#task-edit-form {
+  background-color: #eee;
+  padding: 4px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#task-edit-form {
+}
+
+a {
+  color: #00B7FF;
+}
