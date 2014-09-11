@@ -26,3 +26,7 @@ body {
 a {
   color: #00B7FF;
 }
+
+.page-header h2 small button {
+    color: black;
+}
